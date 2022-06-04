@@ -3,8 +3,10 @@ import React from 'react';
 class SearchBar extends React.Component {
   state = { term: '' };
 
+  // arrowfunction will automaticaly bind 'this'
   onFormSubmit = (event) => {
     event.preventDefault();
+    //we want to communicate this search term up to the parent App component
     this.props.onSubmit(this.state.term);
   }
 

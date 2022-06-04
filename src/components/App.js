@@ -6,6 +6,7 @@ import ImageList from './ImageList';
 class App extends React.Component {
   state = { images: [] };
 
+  // arrowfunction will automaticaly bind 'this'
   onSearchSubmit = async (term) => {
     const response = await unsplash.get('/search/photos', {
       params: { query: term }
